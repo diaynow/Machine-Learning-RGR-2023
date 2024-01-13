@@ -6,7 +6,7 @@ show_pages(
     [
         Page("webs/FirstWebSite.py", "Об авторе"),
         Page("webs/SecondWebSite.py", "О датасете"),
-        Page("webs/ThirdWebSite.py", "Визуализация датасет"),
+        Page("webs/ThirdWebSite.py", "Визуализация датасета"),
         Page("webs/FourthWebSite.py", "Предсказание модели"),
     ]
 )

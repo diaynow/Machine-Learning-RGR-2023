@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import keras
 
+st.title("Предсказание модели")
 
 
 def OutputPrediction(predict):
@@ -73,18 +74,28 @@ if uploadedFile is not None:
     st.subheader("Введите данные для предсказания:")
 
     distance_from_home = st.slider(
-        "distance_from_home", max_value=58.542735, min_value=0.004874
+        "Расстояние от дома, где произошла транзакция",
+        max_value=58.542735,
+        min_value=0.004874,
     )
     distance_from_last_transaction = st.slider(
-        "distance_from_last_transaction", max_value=7.944274, min_value=0.000118
+        "Расстояние от места совершения последней транзакции",
+        max_value=7.944274,
+        min_value=0.000118,
     )
     ratio_to_median_purchase_price = st.slider(
-        "ratio_to_median_purchase_price", max_value=4.527271, min_value=0.004399
+        "Отношение стоимости совершенной сделки к медиане покупной цены",
+        max_value=4.527271,
+        min_value=0.004399,
     )
-    repeat_retailer = st.select_slider("repeat_retailer", [0, 1])
-    used_chip = st.select_slider("used_chip", [0, 1])
-    used_pin_number = st.select_slider("used_pin_number", [0, 1])
-    online_order = st.select_slider("online_order", [0, 1])
+    repeat_retailer = st.select_slider(
+        "Транзакция произошла от того же розничного продавца", [0, 1]
+    )
+    used_chip = st.select_slider("Транзакция через чип (кредитную карту)", [0, 1])
+    used_pin_number = st.select_slider(
+        "Транзакция произошла с использованием PIN-кода", [0, 1]
+    )
+    online_order = st.select_slider("Транзакция является онлайн-заказом", [0, 1])
 
     data = pd.DataFrame(
         {

@@ -19,7 +19,7 @@ for column in columns:
 
 st.header("Ящик с усами")
 df_num = data.select_dtypes(include=np.number)
-plt.figure(figsize=(16, 8))
+plt.figure(figsize=(20, 10))
 for i, column in enumerate(df_num.columns):
     plt.subplot(3, 8, i + 1)
     sns.boxplot(data=df_num, y=column)

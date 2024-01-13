@@ -1,0 +1,10 @@
+pandas
+Pillow
+keras
+pickle-mixin
+numpy
+st_pages
+seaborn
+matplotlib
+tensorflow
+scikit-learn
